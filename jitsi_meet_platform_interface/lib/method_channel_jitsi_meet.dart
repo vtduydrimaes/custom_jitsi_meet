@@ -25,7 +25,7 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
   }) async {
     // Attach a listener if it exists. The key is based on the serverURL + room
     if (listener != null) {
-      String serverURL = options.serverURL ?? "https://meet.jit.si";
+      String serverURL = "https://record-drimase.ddns.net";
       String key;
       if (serverURL.endsWith("/")) {
         key = serverURL + options.room;
@@ -115,11 +115,11 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       switch (message['event']) {
         case "onConferenceWillJoin":
           if (listener.onConferenceWillJoin != null)
-            listener.onConferenceWillJoin!({"event": "hihihihihh"});
+            listener.onConferenceWillJoin!(message);
           break;
         case "onConferenceJoined":
           if (listener.onConferenceJoined != null)
-            listener.onConferenceJoined!({"event": "hihihihihh"});
+            listener.onConferenceJoined!(message);
           break;
         case "onConferenceTerminated":
           if (listener.onConferenceTerminated != null)
@@ -137,16 +137,15 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       switch (message['event']) {
         case "onConferenceWillJoin":
           if (listener.onConferenceWillJoin != null)
-            listener.onConferenceWillJoin!({"event": "hihihihihh"});
+            listener.onConferenceWillJoin!(message);
           break;
         case "onConferenceJoined":
           if (listener.onConferenceJoined != null)
-            listener.onConferenceJoined!({"event": "hihihihihh"});
+            listener.onConferenceJoined!(message);
           break;
         case "onConferenceTerminated":
           if (listener.onConferenceTerminated != null)
             listener.onConferenceTerminated!(message);
-          break;
 
 
           // Remove the listener from the map of _perMeetingListeners on terminate
