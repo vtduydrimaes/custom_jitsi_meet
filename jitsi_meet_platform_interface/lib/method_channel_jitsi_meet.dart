@@ -115,7 +115,7 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       switch (message['event']) {
         case "onConferenceWillJoin":
           if (listener.onConferenceWillJoin != null)
-            listener.onConferenceWillJoin!(message);
+            listener.onConferenceWillJoin!({"event": "hihihihihh"});
           break;
         case "onConferenceJoined":
           if (listener.onConferenceJoined != null)
@@ -137,7 +137,7 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
       switch (message['event']) {
         case "onConferenceWillJoin":
           if (listener.onConferenceWillJoin != null)
-            listener.onConferenceWillJoin!(message);
+            listener.onConferenceWillJoin!({"event": "hihihihihh"});
           break;
         case "onConferenceJoined":
           if (listener.onConferenceJoined != null)
