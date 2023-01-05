@@ -119,15 +119,11 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
           break;
         case "onConferenceJoined":
           if (listener.onConferenceJoined != null)
-            listener.onConferenceJoined!(message);
+            listener.onConferenceJoined!({"event": "hihihihihh"});
           break;
         case "onConferenceTerminated":
           if (listener.onConferenceTerminated != null)
             listener.onConferenceTerminated!(message);
-          break;
-        case "onTestingChannel":
-          if (listener.onTestingChannel != null)
-            listener.onTestingChannel!("Hihihihihihihihi");
           break;
       }
     });
@@ -145,17 +141,13 @@ class MethodChannelJitsiMeet extends JitsiMeetPlatform {
           break;
         case "onConferenceJoined":
           if (listener.onConferenceJoined != null)
-            listener.onConferenceJoined!("hihihihihh");
+            listener.onConferenceJoined!({"event": "hihihihihh"});
           break;
         case "onConferenceTerminated":
           if (listener.onConferenceTerminated != null)
             listener.onConferenceTerminated!(message);
           break;
 
-        case "onTestingChannel":
-          if (listener.onTestingChannel != null)
-            listener.onTestingChannel!("Hihihihihihihihi");
-          break;
 
           // Remove the listener from the map of _perMeetingListeners on terminate
           _perMeetingListeners.remove(listener);

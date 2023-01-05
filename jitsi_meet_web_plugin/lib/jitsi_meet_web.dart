@@ -64,14 +64,6 @@ class JitsiMeetPlugin extends JitsiMeetPlatform {
         listener.onConferenceJoined?.call(message);
       }));
 
-      api?.on("onTestingChannel", allowInterop((dynamic _message) {
-        // Mapping object according with jitsi external api source code
-        Map<String, dynamic> message = {
-          "!!Notice!!": "this is server test 123 la la",
-        };
-        listener.onTestingChannel?.call(message);
-      }));
-
 
       api?.on("videoConferenceLeft", allowInterop((dynamic _message) {
         // Mapping object according with jitsi external api source code
